@@ -1,4 +1,4 @@
-FROM quay.io/library/python:3.11.5-slim-bullseye
+FROM ghcr.io/library/python:3.11.5-slim-bullseye
 ENV PYVERSION 3.11
 ENV WEBLATE_VERSION 5.0.2
 ENV WEBLATE_EXTRAS all,MySQL,zxcvbn,test
