@@ -56,8 +56,8 @@ RUN \
   export DEBIAN_FRONTEND=noninteractive \
   && apt-get update \
   && apt-get install --no-install-recommends -y \
-    gobject-introspection \          # 提供 g-ir-compiler 等工具
-    libgirepository-1.0-1 \     
+    gobject-introspection \
+    libgirepository-1.0-1 \
     nginx-light \
     bundler \
     ruby \
