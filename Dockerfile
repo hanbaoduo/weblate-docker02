@@ -134,31 +134,6 @@ RUN \
   esac \
   && python -c 'from phply.phpparse import make_parser; make_parser()' \
   && ln -s /usr/local/share/weblate/examples/ /app/ \
-  && apt-get -y purge \
-    bundler \
-    ruby-dev \
-    cmake \
-    pkg-config \
-    libleptonica-dev \
-    libtesseract-dev \
-    libmariadb-dev \
-    libxml2-dev \
-    libffi-dev \
-    libxmlsec1-dev \
-    libcairo2-dev \
-    libpq-dev \
-    gcc \
-    g++ \
-    file \
-    make \
-    libsasl2-dev \
-    libacl1-dev \
-    libldap2-dev \
-    libssl-dev \
-    libz-dev   \
-    libjpeg62-turbo-dev \
-  && apt-get -y purge --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-  && apt-get clean \
   && rm -rf /root/.cache /tmp/* /var/lib/apt/lists/*
 
 # Apply hotfixes on Weblate
