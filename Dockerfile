@@ -56,6 +56,8 @@ RUN \
   export DEBIAN_FRONTEND=noninteractive \
   && apt-get update \
   && apt-get install --no-install-recommends -y \
+    gobject-introspection \          # 提供 g-ir-compiler 等工具
+    libgirepository-1.0-1 \     
     nginx-light \
     bundler \
     ruby \
@@ -133,7 +135,6 @@ RUN \
   && python -c 'from phply.phpparse import make_parser; make_parser()' \
   && ln -s /usr/local/share/weblate/examples/ /app/ \
   && apt-get -y purge \
-    girepository-2.0 \
     bundler \
     ruby-dev \
     cmake \
@@ -141,7 +142,6 @@ RUN \
     libleptonica-dev \
     libtesseract-dev \
     libmariadb-dev \
-    libgirepository1.0-dev \
     libxml2-dev \
     libffi-dev \
     libxmlsec1-dev \
