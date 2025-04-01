@@ -89,7 +89,6 @@ RUN \
     libldap-common \
     libssl-dev \
     libffi-dev \
-    girepository-2.0 \
     libpq-dev \
     zlib1g-dev \
     libjpeg62-turbo-dev \
@@ -134,6 +133,7 @@ RUN \
   && python -c 'from phply.phpparse import make_parser; make_parser()' \
   && ln -s /usr/local/share/weblate/examples/ /app/ \
   && apt-get -y purge \
+    girepository-2.0 \
     bundler \
     ruby-dev \
     cmake \
