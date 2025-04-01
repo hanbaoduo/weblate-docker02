@@ -89,6 +89,7 @@ RUN \
     libldap-common \
     libssl-dev \
     libffi-dev \
+    girepository-2.0 \
     libpq-dev \
     zlib1g-dev \
     libjpeg62-turbo-dev \
